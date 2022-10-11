@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,t,a,r,p,sum=0,z,k=0,ar[100],i;
+    scanf("%d%d",&n,&a);
+    t=a;
+    p=n;
+    while(t)
+    {
+     r=p%10;
+     sum=(sum*10)+r;
+     p=p/10;
+     t--;
+    }
+    t=a;
+    z=sum;
+    sum=0;
+    p=0;
+    while(t)
+    {
+      r=z%10;
+      sum=(sum*10)+r;
+      z=z/10;
+      t--;
+    }
+    t=n;
+    while(t)
+    {
+        r=t%10;
+        ar[k]=r;
+        k++;
+        t=t/10;
+    }
+    for(i=k-1;i>k-1-a;i--)
+    {
+        t=(t*10)+ar[i];
+    }
+    printf("%d",abs(t-sum));
+}
